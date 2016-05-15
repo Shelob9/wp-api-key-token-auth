@@ -102,27 +102,3 @@ Get public key and token via jQuery AJAX:
 Use key/token to edit post 1:
 
 
-```
-    var settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "http://local.wordpress-trunk.dev/wp-json/wp/v2/posts/1",
-      "method": "POST",
-      //these would be 
-      "headers": {
-        "x-wp-auth-key": "22a162b2b150ea9d6adec3267e842ffb",
-        "x-wp-auth-token": "7ae00d32169565914c2a7514d913c4c3",
-      },
-      "processData": false,
-      "contentType": false,
-      "mimeType": "multipart/form-data",
-      "data": {
-        'title': "Hello Roy"
-      }
-      
-    }
-    
-    $.ajax(settings).done(function (response) {
-      console.log(response);
-    });
-```
